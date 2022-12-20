@@ -49,7 +49,7 @@ const SignupForm = () => {
     } catch (e) {
       console.error(e);
     }
-    setUserFormData({
+    setFormState({
       username: '',
       email: '',
       password: '',
