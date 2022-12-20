@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import { Form, Button, Alert } from 'react-bootstrap';
+import { useMutation } from '@apollo/client';
 
 import Auth from '../utils/auth';
-
-import { useMutation } from '@apollo/client';
 import { ADD_USER } from '../utils/mutations';
 
 const SignupForm = () => {
@@ -17,6 +16,8 @@ const SignupForm = () => {
     password: '',
   });
 
+  const [addUser, { error }] = useMutation(ADD_USER);
+
   const handleChange = (event) => {
     const { name, value } = event.target;
 
@@ -26,10 +27,16 @@ const SignupForm = () => {
     });
   };
 
-  const [addUser, { error }] = useMutation(ADD_USER);
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
+
+    const form = event.currentTarget;
+    if (form.checkValidity() === false) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
+
 
     // use try/catch instead of promises to handle errors
     try {
@@ -42,6 +49,11 @@ const SignupForm = () => {
     } catch (e) {
       console.error(e);
     }
+    setUserFormData({
+      username: '',
+      email: '',
+      password: '',
+    });
   };
 
   return (
