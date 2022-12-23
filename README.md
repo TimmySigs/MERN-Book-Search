@@ -1,1 +1,63 @@
-# Book Search Engine Starter Code
+# Book Search Engine
+
+## Table of Contents
+
+- [Description](#description)
+- [Technology](#Technology)
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Questions](#questions)
+
+## Description:
+
+This application allows users to search for new books from Google's Book API. Users can log in to save the book they would like to purchase, as well as to remove the books from their library.
+
+## Technology:
+
+Project is created with:
+
+- MongoDB
+- Express.js
+- React.js
+- Node.js
+- JavaScript
+- GraphQL API
+- Apollo Server
+
+## Installation
+
+To run this project, install it locally using npm:
+
+```
+npm install
+```
+
+## Usage
+
+After installing npm packages, the application will be invoked by using the following command:
+
+```
+npm run develop
+```
+
+#### Heroku Deployment
+
+[Click me to see app!](https://mern-book-search-google.herokuapp.com/)
+
+#### App Screenshot
+
+![Screenshot](https://user-images.githubusercontent.com/108436098/209282449-a41acb8b-f4eb-4c47-9c59-37b454bca452.PNG)
+
+## License
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) <br>
+This project is licensed under MIT, for more information please visit [this website](https://opensource.org/licenses/MIT)
+
+
+## Questions?
+
+Please feel free to contact me if you need any further information:
+
+- [Email](mailto:timothy.signore@gmail.com)
+- [Github Profile](https://github.com/TimmySigs)
